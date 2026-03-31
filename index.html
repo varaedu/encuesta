@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta "El Ser" - Nuestra Identidad</title>
+    <style>
+        :root { --blue: #1a73e8; --gray: #f8f9fa; --text: #3c4043; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--gray); color: var(--text); padding: 20px; line-height: 1.5; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h1 { color: var(--blue); text-align: center; font-size: 2rem; margin-bottom: 10px; }
+        .instrucciones { background: #e8f0fe; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 6px solid var(--blue); }
+        h2 { background: var(--blue); color: white; padding: 12px 20px; border-radius: 6px; font-size: 1.2rem; margin-top: 40px; }
+        .opcion { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #eee; transition: 0.2s; }
+        .opcion:hover { background: #fcfcfc; }
+        input[type="number"] { width: 50px; height: 35px; border: 2px solid var(--blue); border-radius: 6px; text-align: center; font-weight: bold; margin-right: 15px; font-size: 1rem; }
+        .texto { flex: 1; font-size: 0.95rem; }
+        .btn { display: block; width: 100%; padding: 20px; background: #28a745; color: white; border: none; border-radius: 8px; font-size: 1.3rem; font-weight: bold; cursor: pointer; margin-top: 50px; }
+        .btn:hover { background: #218838; transform: translateY(-2px); }
+        .footer { text-align: center; margin-top: 20px; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧬 Definamos nuestro "Ser"</h1>
+    
+    <div class="instrucciones">
+        <p><strong>Instrucciones:</strong> En cada bloque de valor, asigna un número del <strong>1 al 5</strong> a cada opción.</p>
+        <p>• <strong>1:</strong> Es el significado que más resuena contigo.<br>• <strong>5:</strong> Es el significado menos prioritario.<br>⚠️ <strong>Importante:</strong> No repitas números dentro del mismo bloque.</p>
+    </div>
+
+    <form name="encuesta-identidad-ser" method="POST" data-netlify="true">
+        
+        <p>
+            <label><strong>Nombre del Colaborador:</strong><br>
+            <input type="text" name="empleado" placeholder="Escribe tu nombre aquí..." style="width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #ccc; border-radius: 6px;" required>
+            </label>
+        </p>
+
+        <h2>1. Ser Comunicativos</h2>
+        <div class="opcion"><input type="number" name="com_1" min="1" max="5" required><span class="texto">Ser comunicativos es: entender profundamente antes de dar una respuesta.</span></div>
+        <div class="opcion"><input type="number" name="com_2" min="1" max="5" required><span class="texto">Ser comunicativos es: transmitir información precisa, sin errores y a tiempo.</span></div>
+        <div class="opcion"><input type="number" name="com_3" min="1" max="5" required><span class="texto">Ser comunicativos es: compartir la verdad, incluso cuando los resultados son malos.</span></div>
+        <div class="opcion"><input type="number" name="com_4" min="1" max="5" required><span class="texto">Ser comunicativos es: decir lo que se piensa con respeto, sin callarse por miedo.</span></div>
+        <div class="opcion"><input type="number" name="com_5" min="1" max="5" required><span class="texto">Ser comunicativos es: mantener a todos informados para que el equipo trabaje alineado.</span></div>
+
+        <h2>2. Ser Comprometidos</h2>
+        <div class="opcion"><input type="number" name="cmp_1" min="1" max="5" required><span class="texto">Ser comprometidos es: sentir la empresa y sus objetivos como si fueran propios.</span></div>
+        <div class="opcion"><input type="number" name="cmp_2" min="1" max="5" required><span class="texto">Ser comprometidos es: no conformarse con "cumplir", sino buscar el mejor resultado posible.</span></div>
+        <div class="opcion"><input type="number" name="cmp_3" min="1" max="5" required><span class="texto">Ser comprometidos es: estar presente y apoyar al equipo en los momentos de crisis.</span></div>
+        <div class="opcion"><input type="number" name="cmp_4" min="1" max="5" required><span class="texto">Ser comprometidos es: mantener el esfuerzo hasta terminar lo que se empezó.</span></div>
+        <div class="opcion"><input type="number" name="cmp_5" min="1" max="5" required><span class="texto">Ser comprometidos es: respetar el tiempo de los demás y los plazos acordados.</span></div>
+
+        <h2>3. Ser Responsables</h2>
+        <div class="opcion"><input type="number" name="res_1" min="1" max="5" required><span class="texto">Ser responsables es: hacerse cargo de las consecuencias de las acciones propias.</span></div>
+        <div class="opcion"><input type="number" name="res_2" min="1" max="5" required><span class="texto">Ser responsables es: trabajar con calidad sin necesidad de supervisión constante.</span></div>
+        <div class="opcion"><input type="number" name="res_3" min="1" max="5" required><span class="texto">Ser responsables es: entender que mi trabajo es el insumo para el éxito de otro.</span></div>
+        <div class="opcion"><input type="number" name="res_4" min="1" max="5" required><span class="texto">Ser responsables es: cuidar los recursos y herramientas de la empresa con honestidad.</span></div>
+        <div class="opcion"><input type="number" name="res_5" min="1" max="5" required><span class="texto">Ser responsables es: ser alguien en quien el equipo siempre puede depositar su confianza.</span></div>
+
+        <h2>4. Ser Autocríticos</h2>
+        <div class="opcion"><input type="number" name="aut_1" min="1" max="5" required><span class="texto">Ser autocríticos es: reconocer abiertamente que no tenemos la verdad absoluta.</span></div>
+        <div class="opcion"><input type="number" name="aut_2" min="1" max="5" required><span class="texto">Ser autocríticos es: analizar el propio desempeño para detectar áreas de mejora.</span></div>
+        <div class="opcion"><input type="number" name="aut_3" min="1" max="5" required><span class="texto">Ser autocríticos es: tener el valor de admitir un error apenas sucede.</span></div>
+        <div class="opcion"><input type="number" name="aut_4" min="1" max="5" required><span class="texto">Ser autocríticos es: recibir el feedback de otros como un regalo, no como un ataque.</span></div>
+        <div class="opcion"><input type="number" name="aut_5" min="1" max="5" required><span class="texto">Ser autocríticos es: evaluar los procesos propios con mente fría, incluso tras un éxito.</span></div>
+
+        <h2>5. Ser Empáticos</h2>
+        <div class="opcion"><input type="number" name="emp_1" min="1" max="5" required><span class="texto">Ser empáticos es: brindar apoyo y comprensión ante situaciones personales difíciles.</span></div>
+        <div class="opcion"><input type="number" name="emp_2" min="1" max="5" required><span class="texto">Ser empáticos es: respetar y dar valor a los sentimientos y opiniones de los demás.</span></div>
+        <div class="opcion"><input type="number" name="emp_3" min="1" max="5" required><span class="texto">Ser empáticos es: ajustar el tono y la forma de ser según la persona que tengo enfrente.</span></div>
+        <div class="opcion"><input type="number" name="emp_4" min="1" max="5" required><span class="texto">Ser empáticos es: anticiparse a las necesidades del compañero para facilitarle el día.</span></div>
+        <div class="opcion"><input type="number" name="emp_5" min="1" max="5" required><span class="texto">Ser empáticos es: hacer que cada persona se sienta integrada y valorada en el grupo.</span></div>
+
+        <h2>6. Ser Compañeros y Familia</h2>
+        <div class="opcion"><input type="number" name="fam_1" min="1" max="5" required><span class="texto">Ser compañeros y familia es: crear un espacio donde todos sientan que pueden ser ellos mismos.</span></div>
+        <div class="opcion"><input type="number" name="fam_2" min="1" max="5" required><span class="texto">Ser compañeros y familia es: priorizar el éxito del grupo por encima del ego individual.</span></div>
+        <div class="opcion"><input type="number" name="fam_3" min="1" max="5" required><span class="texto">Ser compañeros y familia es: fomentar relaciones humanas que vayan más allá de la tarea técnica.</span></div>
+        <div class="opcion"><input type="number" name="fam_4" min="1" max="5" required><span class="texto">Ser compañeros y familia es: cuidar el bienestar y la salud mental de quienes nos rodean.</span></div>
+        <div class="opcion"><input type="number" name="fam_5" min="1" max="5" required><span class="texto">Ser compañeros y familia es: compartir las alegrías y los hitos de la vida de cada integrante.</span></div>
+
+        <h2>7. Ser Agradecidos</h2>
+        <div class="opcion"><input type="number" name="agr_1" min="1" max="5" required><span class="texto">Ser agradecidos es: expresar gratitud por el esfuerzo y ayuda de los colegas.</span></div>
+        <div class="opcion"><input type="number" name="agr_2" min="1" max="5" required><span class="texto">Ser agradecidos es: enfocarse en lo positivo de cada situación, incluso en los retos.</span></div>
+        <div class="opcion"><input type="number" name="agr_3" min="1" max="5" required><span class="texto">Ser agradecidos es: apreciar las oportunidades de crecimiento y el empleo que tenemos.</span></div>
+        <div class="opcion"><input type="number" name="agr_4" min="1" max="5" required><span class="texto">Ser agradecidos es: reconocer que nuestros logros son gracias al apoyo de otros.</span></div>
+        <div class="opcion"><input type="number" name="agr_5" min="1" max="5" required><span class="texto">Ser agradecidos es: devolver con buena disposición lo que el equipo nos brinda.</span></div>
+
+        <h2>8. Ser Honestos</h2>
+        <div class="opcion"><input type="number" name="hon_1" min="1" max="5" required><span class="texto">Ser honestos es: decir siempre la verdad, aunque sea incómoda o difícil.</span></div>
+        <div class="opcion"><input type="number" name="hon_2" min="1" max="5" required><span class="texto">Ser honestos es: actuar éticamente siempre, incluso cuando nadie nos está mirando.</span></div>
+        <div class="opcion"><input type="number" name="hon_3" min="1" max="5" required><span class="texto">Ser honestos es: que lo que pensamos, decimos y hacemos sea una misma cosa.</span></div>
+        <div class="opcion"><input type="number" name="hon_4" min="1" max="5" required><span class="texto">Ser honestos es: ser claros sobre lo que sabemos hacer y lo que no.</span></div>
+        <div class="opcion"><input type="number" name="hon_5" min="1" max="5" required><span class="texto">Ser honestos es: dar a cada quien el crédito que le corresponde sin engaños.</span></div>
+
+        <h2>9. Ser Proactivos</h2>
+        <div class="opcion"><input type="number" name="pro_1" min="1" max="5" required><span class="texto">Ser proactivos es: actuar antes de que alguien lo pida o el problema aparezca.</span></div>
+        <div class="opcion"><input type="number" name="pro_2" min="1" max="5" required><span class="texto">Ser proactivos es: traer una propuesta de mejora cada vez que se detecte una falla.</span></div>
+        <div class="opcion"><input type="number" name="pro_3" min="1" max="5" required><span class="texto">Ser proactivos es: adelantarse a las necesidades futuras del cliente o del equipo.</span></div>
+        <div class="opcion"><input type="number" name="pro_4" min="1" max="5" required><span class="texto">Ser proactivos es: mantener una mentalidad de "hacer que las cosas sucedan".</span></div>
+        <div class="opcion"><input type="number" name="pro_5" min="1" max="5" required><span class="texto">Ser proactivos es: buscar formas nuevas y más eficientes de hacer lo de siempre.</span></div>
+
+        <h2>10. Ser Aprendices</h2>
+        <div class="opcion"><input type="number" name="apr_1" min="1" max="5" required><span class="texto">Ser aprendices es: mantener el deseo constante de preguntar y descubrir el "por qué".</span></div>
+        <div class="opcion"><input type="number" name="apr_2" min="1" max="5" required><span class="texto">Ser aprendices es: estar dispuesto a soltar métodos viejos para aprender nuevos.</span></div>
+        <div class="opcion"><input type="number" name="apr_3" min="1" max="5" required><span class="texto">Ser aprendices es: ver cada equivocación como una lección valiosa y necesaria.</span></div>
+        <div class="opcion"><input type="number" name="apr_4" min="1" max="5" required><span class="texto">Ser aprendices es: enseñar a otros lo aprendido para que el conocimiento circule.</span></div>
+        <div class="opcion"><input type="number" name="apr_5" min="1" max="5" required><span class="texto">Ser aprendices es: buscar activamente nuevas tendencias y herramientas del área.</span></div>
+
+        <button type="submit" class="btn">Enviar mi Encuesta</button>
+    </form>
+    
+    <p class="footer">Encuesta interna de Cultura Organizacional. Tus datos están seguros.</p>
+</div>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
         .opcion { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
         input[type="number"] { width: 50px; height: 35px; border: 2px solid var(--blue); border-radius: 6px; text-align: center; font-weight: bold; margin-right: 15px; font-size: 1rem; }
         .error-msg { color: var(--error); font-weight: bold; display: none; margin-top: 10px; font-size: 0.85rem; }
-        .btn { display: block; width: 100%; padding: 20px; background: var(--success); color: white; border: none; border-radius: 8px; font-size: 1.3rem; font-weight: bold; cursor: pointer; margin-top: 40px; opacity: 1; transition: 0.3s; }
+        .btn { display: block; width: 100%; padding: 20px; background: var(--success); color: white; border: none; border-radius: 8px; font-size: 1.3rem; font-weight: bold; cursor: pointer; margin-top: 40px; transition: 0.3s; }
         .btn:disabled { background: #ccc; cursor: not-allowed; opacity: 0.6; }
         .input-nombre { width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
     </style>
@@ -28,9 +28,9 @@
     
     <div class="instrucciones">
         <p><strong>Instrucciones:</strong> En cada bloque de valor, asigna un número del <strong>1 al 5</strong> a cada opción.</p>
-        <p>• <strong>1:</strong> Es el significado que más resuena contigo.<br>
+        <p>• <strong>1:</strong> Es el significado más importante.<br>
            • <strong>5:</strong> Es el significado menos prioritario.<br>
-        ⚠️ <strong>Regla:</strong> No puedes repetir números dentro de un mismo bloque.</p>
+        ⚠️ <strong>Regla:</strong> Debes usar los números 1, 2, 3, 4 y 5 en cada bloque sin repetirlos.</p>
     </div>
 
     <form id="encuestaForm" name="encuesta-identidad-ser" method="POST" data-netlify="true">
@@ -43,107 +43,106 @@
 
         <div class="bloque-valor">
             <h2>1. Ser Comunicativos</h2>
-            <div class="opcion"><input type="number" name="com_1" min="1" max="5" class="rank-input" required> <span>Ser comunicativos es: entender profundamente antes de dar una respuesta.</span></div>
-            <div class="opcion"><input type="number" name="com_2" min="1" max="5" class="rank-input" required> <span>Ser comunicativos es: transmitir información precisa, sin errores y a tiempo.</span></div>
-            <div class="opcion"><input type="number" name="com_3" min="1" max="5" class="rank-input" required> <span>Ser comunicativos es: compartir la verdad, incluso cuando los resultados son malos.</span></div>
-            <div class="opcion"><input type="number" name="com_4" min="1" max="5" class="rank-input" required> <span>Ser comunicativos es: decir lo que se piensa con respeto, sin callarse por miedo.</span></div>
-            <div class="opcion"><input type="number" name="com_5" min="1" max="5" class="rank-input" required> <span>Ser comunicativos es: mantener a todos informados para que el equipo trabaje alineado.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="com_1" class="rank-input" required> <span>Ser comunicativos es: entender profundamente antes de dar una respuesta.</span></div>
+            <div class="opcion"><input type="number" name="com_2" class="rank-input" required> <span>Ser comunicativos es: transmitir información precisa, sin errores y a tiempo.</span></div>
+            <div class="opcion"><input type="number" name="com_3" class="rank-input" required> <span>Ser comunicativos es: compartir la verdad, incluso cuando los resultados son malos.</span></div>
+            <div class="opcion"><input type="number" name="com_4" class="rank-input" required> <span>Ser comunicativos es: decir lo que se piensa con respeto, sin callarse por miedo.</span></div>
+            <div class="opcion"><input type="number" name="com_5" class="rank-input" required> <span>Ser comunicativos es: mantener a todos informados para que el equipo trabaje alineado.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>2. Ser Comprometidos</h2>
-            <div class="opcion"><input type="number" name="cmp_1" min="1" max="5" class="rank-input" required> <span>Ser comprometidos es: sentir la empresa y sus objetivos como si fueran propios.</span></div>
-            <div class="opcion"><input type="number" name="cmp_2" min="1" max="5" class="rank-input" required> <span>Ser comprometidos es: no conformarse con "cumplir", sino buscar el mejor resultado posible.</span></div>
-            <div class="opcion"><input type="number" name="cmp_3" min="1" max="5" class="rank-input" required> <span>Ser comprometidos es: estar presente y apoyar al equipo en los momentos de crisis.</span></div>
-            <div class="opcion"><input type="number" name="cmp_4" min="1" max="5" class="rank-input" required> <span>Ser comprometidos es: mantener el esfuerzo hasta terminar lo que se empezó.</span></div>
-            <div class="opcion"><input type="number" name="cmp_5" min="1" max="5" class="rank-input" required> <span>Ser comprometidos es: respetar el tiempo de los demás y los plazos acordados.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="cmp_1" class="rank-input" required> <span>Ser comprometidos es: sentir la empresa y sus objetivos como si fueran propios.</span></div>
+            <div class="opcion"><input type="number" name="cmp_2" class="rank-input" required> <span>Ser comprometidos es: no conformarse con "cumplir", sino buscar el mejor resultado posible.</span></div>
+            <div class="opcion"><input type="number" name="cmp_3" class="rank-input" required> <span>Ser comprometidos es: estar presente y apoyar al equipo en los momentos de crisis.</span></div>
+            <div class="opcion"><input type="number" name="cmp_4" class="rank-input" required> <span>Ser comprometidos es: mantener el esfuerzo hasta terminar lo que se empezó.</span></div>
+            <div class="opcion"><input type="number" name="cmp_5" class="rank-input" required> <span>Ser comprometidos es: respetar el tiempo de los demás y los plazos acordados.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>3. Ser Responsables</h2>
-            <div class="opcion"><input type="number" name="res_1" min="1" max="5" class="rank-input" required> <span>Ser responsables es: hacerse cargo de las consecuencias de las acciones propias.</span></div>
-            <div class="opcion"><input type="number" name="res_2" min="1" max="5" class="rank-input" required> <span>Ser responsables es: trabajar con calidad sin necesidad de supervisión constante.</span></div>
-            <div class="opcion"><input type="number" name="res_3" min="1" max="5" class="rank-input" required> <span>Ser responsables es: entender que mi trabajo es el insumo para el éxito de otro.</span></div>
-            <div class="opcion"><input type="number" name="res_4" min="1" max="5" class="rank-input" required> <span>Ser responsables es: cuidar los recursos y herramientas de la empresa con honestidad.</span></div>
-            <div class="opcion"><input type="number" name="res_5" min="1" max="5" class="rank-input" required> <span>Ser responsables es: ser alguien en quien el equipo siempre puede depositar su confianza.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="res_1" class="rank-input" required> <span>Ser responsables es: hacerse cargo de las consecuencias de las acciones propias.</span></div>
+            <div class="opcion"><input type="number" name="res_2" class="rank-input" required> <span>Ser responsables es: trabajar con calidad sin necesidad de supervisión constante.</span></div>
+            <div class="opcion"><input type="number" name="res_3" class="rank-input" required> <span>Ser responsables es: entender que mi trabajo es el insumo para el éxito de otro.</span></div>
+            <div class="opcion"><input type="number" name="res_4" class="rank-input" required> <span>Ser responsables es: cuidar los recursos y herramientas de la empresa con honestidad.</span></div>
+            <div class="opcion"><input type="number" name="res_5" class="rank-input" required> <span>Ser responsables es: ser alguien en quien el equipo siempre puede depositar su confianza.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>4. Ser Autocríticos</h2>
-            <div class="opcion"><input type="number" name="aut_1" min="1" max="5" class="rank-input" required> <span>Ser autocríticos es: reconocer abiertamente que no tenemos la verdad absoluta.</span></div>
-            <div class="opcion"><input type="number" name="aut_2" min="1" max="5" class="rank-input" required> <span>Ser autocríticos es: analizar el propio desempeño para detectar áreas de mejora.</span></div>
-            <div class="opcion"><input type="number" name="aut_3" min="1" max="5" class="rank-input" required> <span>Ser autocríticos es: tener el valor de admitir un error apenas sucede.</span></div>
-            <div class="opcion"><input type="number" name="aut_4" min="1" max="5" class="rank-input" required> <span>Ser autocríticos es: recibir el feedback de otros como un regalo, no como un ataque.</span></div>
-            <div class="opcion"><input type="number" name="aut_5" min="1" max="5" class="rank-input" required> <span>Ser autocríticos es: evaluar los procesos propios con mente fría, incluso tras un éxito.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="aut_1" class="rank-input" required> <span>Ser autocríticos es: reconocer abiertamente que no tenemos la verdad absoluta.</span></div>
+            <div class="opcion"><input type="number" name="aut_2" class="rank-input" required> <span>Ser autocríticos es: analizar el propio desempeño para detectar áreas de mejora.</span></div>
+            <div class="opcion"><input type="number" name="aut_3" class="rank-input" required> <span>Ser autocríticos es: tener el valor de admitir un error apenas sucede.</span></div>
+            <div class="opcion"><input type="number" name="aut_4" class="rank-input" required> <span>Ser autocríticos es: recibir el feedback de otros como un regalo, no como un ataque.</span></div>
+            <div class="opcion"><input type="number" name="aut_5" class="rank-input" required> <span>Ser autocríticos es: evaluar los procesos propios con mente fría, incluso tras un éxito.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>5. Ser Empáticos</h2>
-            <div class="opcion"><input type="number" name="emp_1" min="1" max="5" class="rank-input" required> <span>Ser empáticos es: brindar apoyo y comprensión ante situaciones personales difíciles.</span></div>
-            <div class="opcion"><input type="number" name="emp_2" min="1" max="5" class="rank-input" required> <span>Ser empáticos es: respetar y dar valor a los sentimientos y opiniones de los demás.</span></div>
-            <div class="opcion"><input type="number" name="emp_3" min="1" max="5" class="rank-input" required> <span>Ser empáticos es: ajustar el tono y la forma de ser según la persona que tengo enfrente.</span></div>
-            <div class="opcion"><input type="number" name="emp_4" min="1" max="5" class="rank-input" required> <span>Ser empáticos es: anticiparse a las necesidades del compañero para facilitarle el día.</span></div>
-            <div class="opcion"><input type="number" name="emp_5" min="1" max="5" class="rank-input" required> <span>Ser empáticos es: hacer que cada persona se sienta integrada y valorada en el grupo.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="emp_1" class="rank-input" required> <span>Ser empáticos es: brindar apoyo y comprensión ante situaciones personales difíciles.</span></div>
+            <div class="opcion"><input type="number" name="emp_2" class="rank-input" required> <span>Ser empáticos es: respetar y dar valor a los sentimientos y opiniones de los demás.</span></div>
+            <div class="opcion"><input type="number" name="emp_3" class="rank-input" required> <span>Ser empáticos es: ajustar el tono y la forma de ser según la persona que tengo enfrente.</span></div>
+            <div class="opcion"><input type="number" name="emp_4" class="rank-input" required> <span>Ser empáticos es: anticiparse a las necesidades del compañero para facilitarle el día.</span></div>
+            <div class="opcion"><input type="number" name="emp_5" class="rank-input" required> <span>Ser empáticos es: hacer que cada persona se sienta integrada y valorada en el grupo.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>6. Ser Compañeros y Familia</h2>
-            <div class="opcion"><input type="number" name="fam_1" min="1" max="5" class="rank-input" required> <span>Ser compañeros y familia es: crear un espacio donde todos sientan que pueden ser ellos mismos.</span></div>
-            <div class="opcion"><input type="number" name="fam_2" min="1" max="5" class="rank-input" required> <span>Ser compañeros y familia es: priorizar el éxito del grupo por encima del ego individual.</span></div>
-            <div class="opcion"><input type="number" name="fam_3" min="1" max="5" class="rank-input" required> <span>Ser compañeros y familia es: fomentar relaciones humanas que vayan más allá de la tarea técnica.</span></div>
-            <div class="opcion"><input type="number" name="fam_4" min="1" max="5" class="rank-input" required> <span>Ser compañeros y familia es: cuidar el bienestar y la salud mental de quienes nos rodean.</span></div>
-            <div class="opcion"><input type="number" name="fam_5" min="1" max="5" class="rank-input" required> <span>Ser compañeros y familia es: compartir las alegrías y los hitos de la vida de cada integrante.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="fam_1" class="rank-input" required> <span>Ser compañeros y familia es: crear un espacio donde todos sientan que pueden ser ellos mismos.</span></div>
+            <div class="opcion"><input type="number" name="fam_2" class="rank-input" required> <span>Ser compañeros y familia es: priorizar el éxito del grupo por encima del ego individual.</span></div>
+            <div class="opcion"><input type="number" name="fam_3" class="rank-input" required> <span>Ser compañeros y familia es: fomentar relaciones humanas que vayan más allá de la tarea técnica.</span></div>
+            <div class="opcion"><input type="number" name="fam_4" class="rank-input" required> <span>Ser compañeros y familia es: cuidar el bienestar y la salud mental de quienes nos rodean.</span></div>
+            <div class="opcion"><input type="number" name="fam_5" class="rank-input" required> <span>Ser compañeros y familia es: compartir las alegrías y los hitos de la vida de cada integrante.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>7. Ser Agradecidos</h2>
-            <div class="opcion"><input type="number" name="agr_1" min="1" max="5" class="rank-input" required> <span>Ser agradecidos es: expresar gratitud por el esfuerzo y ayuda de los colegas.</span></div>
-            <div class="opcion"><input type="number" name="agr_2" min="1" max="5" class="rank-input" required> <span>Ser agradecidos es: enfocarse en lo positivo de cada situación, incluso en los retos.</span></div>
-            <div class="opcion"><input type="number" name="agr_3" min="1" max="5" class="rank-input" required> <span>Ser agradecidos es: apreciar las oportunidades de crecimiento y el empleo que tenemos.</span></div>
-            <div class="opcion"><input type="number" name="agr_4" min="1" max="5" class="rank-input" required> <span>Ser agradecidos es: reconocer que nuestros logros son gracias al apoyo de otros.</span></div>
-            <div class="opcion"><input type="number" name="agr_5" min="1" max="5" class="rank-input" required> <span>Ser agradecidos es: devolver con buena disposición lo que el equipo nos brinda.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="agr_1" class="rank-input" required> <span>Ser agradecidos es: expresar gratitud por el esfuerzo y ayuda de los colegas.</span></div>
+            <div class="opcion"><input type="number" name="agr_2" class="rank-input" required> <span>Ser agradecidos es: enfocarse en lo positivo de cada situación, incluso en los retos.</span></div>
+            <div class="opcion"><input type="number" name="agr_3" class="rank-input" required> <span>Ser agradecidos es: apreciar las oportunidades de crecimiento y el empleo que tenemos.</span></div>
+            <div class="opcion"><input type="number" name="agr_4" class="rank-input" required> <span>Ser agradecidos es: reconocer que nuestros logros son gracias al apoyo de otros.</span></div>
+            <div class="opcion"><input type="number" name="agr_5" class="rank-input" required> <span>Ser agradecidos es: devolver con buena disposición lo que el equipo nos brinda.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>8. Ser Honestos</h2>
-            <div class="opcion"><input type="number" name="hon_1" min="1" max="5" class="rank-input" required> <span>Ser honestos es: decir siempre la verdad, aunque sea incómoda o difícil.</span></div>
-            <div class="opcion"><input type="number" name="hon_2" min="1" max="5" class="rank-input" required> <span>Ser honestos es: actuar éticamente siempre, incluso cuando nadie nos está mirando.</span></div>
-            <div class="opcion"><input type="number" name="hon_3" min="1" max="5" class="rank-input" required> <span>Ser honestos es: que lo que pensamos, decimos y hacemos sea una misma cosa.</span></div>
-            <div class="opcion"><input type="number" name="hon_4" min="1" max="5" class="rank-input" required> <span>Ser honestos es: ser claros sobre lo que sabemos hacer y lo que no.</span></div>
-            <div class="opcion"><input type="number" name="hon_5" min="1" max="5" class="rank-input" required> <span>Ser honestos es: dar a cada quien el crédito que le corresponde sin engaños.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="hon_1" class="rank-input" required> <span>Ser honestos es: decir siempre la verdad, aunque sea incómoda o difícil.</span></div>
+            <div class="opcion"><input type="number" name="hon_2" class="rank-input" required> <span>Ser honestos es: actuar éticamente siempre, incluso cuando nadie nos está mirando.</span></div>
+            <div class="opcion"><input type="number" name="hon_3" class="rank-input" required> <span>Ser honestos es: que lo que pensamos, decimos y hacemos sea una misma cosa.</span></div>
+            <div class="opcion"><input type="number" name="hon_4" class="rank-input" required> <span>Ser honestos es: ser claros sobre lo que sabemos hacer y lo que no.</span></div>
+            <div class="opcion"><input type="number" name="hon_5" class="rank-input" required> <span>Ser honestos es: dar a cada quien el crédito que le corresponde sin engaños.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>9. Ser Proactivos</h2>
-            <div class="opcion"><input type="number" name="pro_1" min="1" max="5" class="rank-input" required> <span>Ser proactivos es: actuar antes de que alguien lo pida o el problema aparezca.</span></div>
-            <div class="opcion"><input type="number" name="pro_2" min="1" max="5" class="rank-input" required> <span>Ser proactivos es: traer una propuesta de mejora cada vez que se detecte una falla.</span></div>
-            <div class="opcion"><input type="number" name="pro_3" min="1" max="5" class="rank-input" required> <span>Ser proactivos es: adelantarse a las necesidades futuras del cliente o del equipo.</span></div>
-            <div class="opcion"><input type="number" name="pro_4" min="1" max="5" class="rank-input" required> <span>Ser proactivos es: mantener una mentalidad de "hacer que las cosas sucedan".</span></div>
-            <div class="opcion"><input type="number" name="pro_5" min="1" max="5" class="rank-input" required> <span>Ser proactivos es: buscar formas nuevas y más eficientes de hacer lo de siempre.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="pro_1" class="rank-input" required> <span>Ser proactivos es: actuar antes de que alguien lo pida o el problema aparezca.</span></div>
+            <div class="opcion"><input type="number" name="pro_2" class="rank-input" required> <span>Ser proactivos es: traer una propuesta de mejora cada vez que se detecte una falla.</span></div>
+            <div class="opcion"><input type="number" name="pro_3" class="rank-input" required> <span>Ser proactivos es: adelantarse a las necesidades futuras del cliente o del equipo.</span></div>
+            <div class="opcion"><input type="number" name="pro_4" class="rank-input" required> <span>Ser proactivos es: mantener una mentalidad de "hacer que las cosas sucedan".</span></div>
+            <div class="opcion"><input type="number" name="pro_5" class="rank-input" required> <span>Ser proactivos es: buscar formas nuevas y más eficientes de hacer lo de siempre.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <div class="bloque-valor">
             <h2>10. Ser Aprendices</h2>
-            <div class="opcion"><input type="number" name="apr_1" min="1" max="5" class="rank-input" required> <span>Ser aprendices es: mantener el deseo constante de preguntar y descubrir el "por qué".</span></div>
-            <div class="opcion"><input type="number" name="apr_2" min="1" max="5" class="rank-input" required> <span>Ser aprendices es: estar dispuesto a soltar métodos viejos para aprender nuevos.</span></div>
-            <div class="opcion"><input type="number" name="apr_3" min="1" max="5" class="rank-input" required> <span>Ser aprendices es: ver cada equivocación como una lección valiosa y necesaria.</span></div>
-            <div class="opcion"><input type="number" name="apr_4" min="1" max="5" class="rank-input" required> <span>Ser aprendices es: enseñar a otros lo aprendido para que el conocimiento circule.</span></div>
-            <div class="opcion"><input type="number" name="apr_5" min="1" max="5" class="rank-input" required> <span>Ser aprendices es: buscar activamente nuevas tendencias y herramientas del área.</span></div>
-            <p class="error-msg">⚠️ No repitas números en este bloque. Usa del 1 al 5.</p>
+            <div class="opcion"><input type="number" name="apr_1" class="rank-input" required> <span>Ser aprendices es: mantener el deseo constante de preguntar y descubrir el "por qué".</span></div>
+            <div class="opcion"><input type="number" name="apr_2" class="rank-input" required> <span>Ser aprendices es: estar dispuesto a soltar métodos viejos para aprender nuevos.</span></div>
+            <div class="opcion"><input type="number" name="apr_3" class="rank-input" required> <span>Ser aprendices es: ver cada equivocación como una lección valiosa y necesaria.</span></div>
+            <div class="opcion"><input type="number" name="apr_4" class="rank-input" required> <span>Ser aprendices es: enseñar a otros lo aprendido para que el conocimiento circule.</span></div>
+            <div class="opcion"><input type="number" name="apr_5" class="rank-input" required> <span>Ser aprendices es: buscar activamente nuevas tendencias y herramientas del área.</span></div>
+            <p class="error-msg"></p>
         </div>
 
         <button type="submit" id="submitBtn" class="btn" disabled>Enviar mi Encuesta</button>
     </form>
-    <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 20px;">Cultura Corporativa 2026</p>
 </div>
 
 <script>
@@ -152,35 +151,45 @@
     const submitBtn = document.getElementById('submitBtn');
 
     function validarFormulario() {
-        let formValido = true;
-        let todosCompletos = true;
+        let todoElFormValido = true;
+        let todosLlenos = true;
 
         bloques.forEach(bloque => {
             const inputs = bloque.querySelectorAll('.rank-input');
             const valores = Array.from(inputs).map(i => i.value).filter(v => v !== "");
-            const unicos = new Set(valores);
             const errorMsg = bloque.querySelector('.error-msg');
-
+            
+            const unicos = new Set(valores);
             const hayDuplicados = valores.length !== unicos.size;
-            const estaCompleto = valores.length === 5;
+            const fueraRango = valores.some(v => parseInt(v) < 1 || parseInt(v) > 5);
+            const incompleto = valores.length < 5;
 
-            if (hayDuplicados) {
+            if (hayDuplicados || fueraRango) {
                 bloque.classList.add('invalid');
                 errorMsg.style.display = 'block';
-                formValido = false;
+                errorMsg.innerText = hayDuplicados ? "⚠️ No repitas números." : "⚠️ Usa solo números del 1 al 5.";
+                todoElFormValido = false;
             } else {
                 bloque.classList.remove('invalid');
                 errorMsg.style.display = 'none';
             }
 
-            if (!estaCompleto) todosCompletos = false;
+            if (incompleto || hayDuplicados || fueraRango) {
+                todosLlenos = false;
+            }
         });
 
-        // El botón solo se activa si no hay errores Y todos los campos están llenos
-        submitBtn.disabled = !(formValido && todosCompletos);
+        // Habilita el botón solo si no hay errores y están los 50 campos llenos correctamente
+        submitBtn.disabled = !(todoElFormValido && todosLlenos);
     }
 
-    form.addEventListener('input', validarFormulario);
+    form.addEventListener('input', (e) => {
+        // Evitar que escriban más de un dígito
+        if (e.target.classList.contains('rank-input')) {
+            if (e.target.value.length > 1) e.target.value = e.target.value.slice(0, 1);
+        }
+        validarFormulario();
+    });
 </script>
 
 </body>
